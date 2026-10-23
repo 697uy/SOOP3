@@ -9,40 +9,249 @@
 :root{--bg:#030611;--panel:#070b1a;--purple:#7027ff;--purple2:#9b59ff;--line:#28204d;--text:#f5f3ff;--muted:#a6a4c7;--green:#22e6a0}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none;cursor:pointer}
 .topbar{height:76px;display:flex;align-items:center;gap:22px;padding:0 30px;border-bottom:1px solid #442080;background:#030611;position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:10px;min-width:260px;font-size:29px;font-weight:800;letter-spacing:-1px}.brand-icon{font-size:38px;color:#a66aff;text-shadow:0 0 14px #792bff}.brand span:last-child span{color:#7b2dff}.top-link{margin-left:auto;border:1px solid #442080;background:#0b0820;border-radius:9px;padding:10px 14px;white-space:nowrap}.top-link:hover{background:#4e17b8}
-.wrap{max-width:1250px;margin:0 auto;padding:28px 26px 40px}.hero{border:1px solid #6b26e8;border-radius:14px;padding:36px;background:radial-gradient(ellipse at 85% 20%,#5520a955,transparent 42%),linear-gradient(105deg,#05091a,#10064c 55%,#05091a);box-shadow:0 0 24px #4512a533}.eyebrow{color:#b88aff;font-weight:bold;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:10px 0;color:#d5bdff}.hero p{max-width:800px;font-size:17px;color:#d2c9ff;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;border:1px solid #6d30c6;border-radius:9px;padding:12px 17px;background:linear-gradient(110deg,#601cff,#9b49ff);font-weight:bold}.btn.secondary{background:#0b0923;border-color:#492078;color:#dfd1ff}.section-title{display:flex;align-items:center;gap:14px;margin:32px 0 15px}.section-title h2{font-size:25px;margin:0;white-space:nowrap}.section-title:after{content:"";height:1px;background:linear-gradient(90deg,#7b25ff,#25123e);flex:1}.intro{color:#c9c4e4;line-height:1.8;max-width:1000px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid #30205b;border-radius:12px;padding:20px;background:linear-gradient(145deg,#0b0e20,#050817);box-shadow:0 8px 24px #0003;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:#8d45ff}.card-icon{font-size:35px;margin-bottom:8px;filter:drop-shadow(0 0 10px #7a2cff55)}.card h3{margin:5px 0 8px;font-size:19px;color:#d7c2ff}.card p{margin:0;color:#bcb6da;line-height:1.65}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.pill{font-size:12px;color:#e2d5ff;border:1px solid #4b2a7c;background:#110d29;border-radius:20px;padding:5px 9px}.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.feature{border:1px solid #28214a;background:#080b1b;border-radius:10px;padding:18px}.feature b{display:block;color:#c9a6ff;font-size:17px;margin-bottom:5px}.feature p{color:#bcb6da;margin:0}.footer{margin-top:35px;text-align:center;background:linear-gradient(90deg,#3210a5,#5d19d8);padding:20px;font-size:17px;color:#e1d5ff;border-top:2px solid #7928ff}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.features{grid-template-columns:1fr}.topbar{padding:0 14px;gap:10px}.brand{min-width:0;font-size:23px}.brand-icon{font-size:29px}.wrap{padding:18px 12px 28px}.hero{padding:24px}.section-title h2{font-size:21px}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}.topbar{height:auto;min-height:68px;flex-wrap:wrap;padding:10px}.top-link{margin-left:0}.hero{padding:20px}.hero p{font-size:15px}.section-title h2{white-space:normal}}
+.wrap{max-width:1250px;margin:0 auto;padding:28px 26px 40px}.hero{border:1px solid #6b26e8;border-radius:14px;padding:36px;background:radial-gradient(ellipse at 85% 20%,#5520a955,transparent 42%),linear-gradient(105deg,#05091a,#10064c 55%,#05091a);box-shadow:0 0 24px #4512a533}.eyebrow{color:#b88aff;font-weight:bold;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:10px 0;color:#d5bdff}.hero p{max-width:800px;font-size:17px;color:#d2c9ff;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;border:1px solid #6d30c6;border-radius:9px;padding:12px 17px;background:linear-gradient(110deg,#601cff,#9b49ff);font-weight:bold}.btn.secondary{background:#0b0923;border-color:#492078;color:#dfd1ff}.section-title{display:flex;align-items:center;gap:14px;margin:32px 0 15px}.section-title h2{font-size:25px;margin:0;white-space:nowrap}.section-title:after{content:"";height:1px;background:linear-gradient(90deg,#7b25ff,#25123e);flex:1}.intro{color:#c9c4e4;line-height:1.8;max-width:1000px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.catalog-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px;align-items:start}.category-sidebar{border:1px solid #30205b;border-radius:12px;padding:14px;background:linear-gradient(145deg,#0b0e20,#050817)}.category-sidebar h2{font-size:20px;margin:4px 8px 14px;color:#d7c2ff}.category-link{display:block;padding:13px 12px;margin:8px 0;border:1px solid #30205b;border-radius:9px;background:#0b0e20;transition:border-color .2s,background .2s}.category-link:hover{border-color:#8d45ff;background:#15102b}.category-link strong{display:block;font-size:15px}.category-link span{display:block;color:#a6a4c7;font-size:12px;margin-top:3px}.category-content{min-width:0}.card{border:1px solid #30205b;border-radius:12px;padding:20px;background:linear-gradient(145deg,#0b0e20,#050817);box-shadow:0 8px 24px #0003;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:#8d45ff}.card-icon{font-size:35px;margin-bottom:8px;filter:drop-shadow(0 0 10px #7a2cff55)}.card h3{margin:5px 0 8px;font-size:19px;color:#d7c2ff}.card p{margin:0;color:#bcb6da;line-height:1.65}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.pill{font-size:12px;color:#e2d5ff;border:1px solid #4b2a7c;background:#110d29;border-radius:20px;padding:5px 9px}.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.feature{border:1px solid #28214a;background:#080b1b;border-radius:10px;padding:18px}.feature b{display:block;color:#c9a6ff;font-size:17px;margin-bottom:5px}.feature p{color:#bcb6da;margin:0}.footer{margin-top:35px;text-align:center;background:linear-gradient(90deg,#3210a5,#5d19d8);padding:20px;font-size:17px;color:#e1d5ff;border-top:2px solid #7928ff}
+
+.subcategory-row{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 20px}.subcategory-btn{border:1px solid #4b2a7c;background:#100d27;color:#e5dcff;border-radius:22px;padding:9px 15px;cursor:pointer;font-weight:700}.subcategory-btn.active,.subcategory-btn:hover{background:linear-gradient(110deg,#601cff,#9b49ff);border-color:#9b59ff;color:white}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.product-card{overflow:hidden;border:1px solid #30205b;border-radius:12px;background:linear-gradient(145deg,#0b0e20,#050817);display:flex;flex-direction:column;min-width:0}.product-image{height:175px;background:#0a0d1b;display:flex;align-items:center;justify-content:center;padding:12px}.product-image img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 16px #0008)}.product-info{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}.product-info h3{font-size:16px;color:#e4d5ff;margin:0}.product-info p{font-size:13px;color:#aaa6cc;margin:0;min-height:38px}.price{font-size:20px;font-weight:800;color:#a98aff}.buy-btn{border:0;border-radius:8px;padding:10px;background:linear-gradient(110deg,#601cff,#9b49ff);color:white;font-weight:bold;cursor:pointer;margin-top:auto}.buy-btn.added{background:#126b50}.cart-status{margin-left:auto;color:#d9c8ff;border:1px solid #442080;background:#0b0820;border-radius:9px;padding:10px 14px;white-space:nowrap;cursor:pointer;font:inherit}.cart-status:hover{border-color:#9b59ff;box-shadow:0 0 14px #7027ff33}.empty-note{color:#aaa6cc;padding:20px;border:1px dashed #4b2a7c;border-radius:10px}.category-item{margin:8px 0;border:1px solid #30205b;border-radius:12px;overflow:hidden;background:linear-gradient(145deg,#0b0e20,#070817);transition:border-color .2s,box-shadow .2s}.category-item.open{border-color:#8d45ff;box-shadow:0 0 18px #7027ff22}.category-toggle{width:100%;display:flex;align-items:center;gap:12px;text-align:left;padding:13px 12px;border:0;background:transparent;color:var(--text);cursor:pointer}.category-emoji{display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:14px;background:radial-gradient(circle at 30% 20%,#7435e8,#251052 72%);font-size:25px;box-shadow:inset 0 0 16px #b28aff22,0 0 14px #7027ff22;border:1px solid #5930a0}.category-item.open .category-emoji{background:radial-gradient(circle at 30% 20%,#a45dff,#391080 72%);box-shadow:0 0 18px #7027ff55}.category-label{flex:1;min-width:0}.category-label strong{display:block;font-size:15px}.category-label small{display:block;color:#a6a4c7;font-size:12px;margin-top:3px}.category-arrow{font-size:20px;color:#cbb4ff;transition:transform .2s}.category-item.open .category-arrow{transform:rotate(90deg)}.category-sublist{display:none;padding:0 10px 10px 64px;gap:6px}.category-item.open .category-sublist{display:grid}.category-subbtn{width:100%;text-align:left;border:1px solid #30205b;border-radius:8px;background:#080b1b;color:#d9d0f5;padding:9px 10px;cursor:pointer;font-size:13px}.category-subbtn:hover,.category-subbtn.active{border-color:#9b59ff;background:linear-gradient(100deg,#31106c,#17102f);color:#fff}.category-subbtn.active:before{content:'• ';color:#b98aff;font-size:16px}
+
+.cart-overlay{position:fixed;inset:0;background:rgba(1,3,14,.78);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px;z-index:100}.cart-overlay.open{display:flex}.cart-modal{width:min(1120px,100%);height:min(780px,88vh);max-height:88vh;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(145deg,#0c1025,#050714);border:1px solid #8746ff;border-radius:18px;box-shadow:0 0 55px #7027ff44;padding:22px}.cart-body{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:24px;min-height:0;flex:1}.cart-items-panel{overflow-y:auto;padding-right:8px;min-width:0}.cart-summary{border:1px solid #30205b;border-radius:10px;background:#0a0c21;padding:18px;display:flex;flex-direction:column;min-height:0}.cart-summary h3{margin:0 0 12px;color:#c9a6ff;font-size:16px}.cart-summary-list{flex:1;overflow:auto;color:#d8d1f0;font-size:13px}.cart-summary-row{display:flex;justify-content:space-between;gap:10px;margin:0 0 10px}.cart-summary-row span{min-width:0}.cart-summary-row strong{white-space:nowrap}.cart-summary-total{border-top:1px solid #35215c;margin-top:12px;padding-top:14px;display:flex;justify-content:space-between;gap:10px;font-size:19px;font-weight:800}.cart-summary-total strong{color:#22e6a0}.cart-summary .cart-checkout{margin-top:18px}.cart-summary .cart-note{text-align:left}.cart-items-panel .cart-empty{border:1px dashed #4b2a7c;border-radius:10px}.cart-modal-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #30205b;padding-bottom:14px;margin-bottom:10px}.cart-modal-head h2{margin:0;color:#e8dcff;font-size:24px}.cart-close{background:#17102f;border:1px solid #4b2a7c;border-radius:9px;color:#fff;font-size:22px;width:38px;height:38px;cursor:pointer}.cart-item{display:grid;grid-template-columns:70px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #242044}.cart-item img{width:70px;height:70px;object-fit:contain;background:#080b1b;border-radius:10px;border:1px solid #30205b}.cart-item h3{margin:0 0 5px;font-size:15px}.cart-item-price{color:#b38bff;font-weight:800}.cart-controls{display:flex;align-items:center;gap:8px;margin-top:7px}.cart-controls button,.remove-item{border:1px solid #4b2a7c;background:#100d27;color:white;border-radius:7px;min-width:28px;height:27px;cursor:pointer}.remove-item{color:#c99aff;font-size:17px}.cart-total{display:flex;justify-content:space-between;align-items:center;font-size:19px;font-weight:800;padding:18px 0}.cart-total strong{color:#b38bff}.cart-checkout{width:100%;border:0;border-radius:10px;padding:14px;background:linear-gradient(110deg,#601cff,#9b49ff);color:white;font-weight:800;font-size:15px;cursor:pointer}.cart-empty{text-align:center;color:#aaa6cc;padding:28px 10px}.cart-note{font-size:12px;color:#aaa6cc;text-align:center;margin:12px 0 0}
+.shop-search{height:44px;flex:1;min-width:150px;display:flex;align-items:center;border:2px solid #792aff;border-radius:28px;padding:0 14px;background:#0b0923;box-shadow:0 0 12px #5720c466}.shop-search input{width:100%;min-width:0;background:transparent;border:0;outline:0;color:#fff;font-size:15px}.shop-search input::placeholder{color:#aaa6cc}.shop-search button{border:0;background:transparent;color:#fff;font-size:25px;cursor:pointer}.language-btn,.account-btn{border:1px solid #442080;background:#0b0820;color:#e2d5ff;border-radius:9px;padding:10px 12px;white-space:nowrap;cursor:pointer;font:inherit}.language-btn:hover,.account-btn:hover{border-color:#9b59ff}.avatar-small{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:linear-gradient(135deg,#fff,#b9a0ff);color:#6a27c7;margin-right:5px;font-size:13px}.country-filter{margin-top:12px;padding:14px;border:1px solid #30205b;border-radius:12px;background:linear-gradient(145deg,#0b0e20,#050817)}.country-filter label{display:block;margin-bottom:9px;color:#d7c2ff;font-size:14px;font-weight:700}.country-filter select{width:100%;background:#100d27;border:1px solid #4b2a7c;border-radius:8px;color:#eee5ff;padding:10px;font:inherit}.currency-note{font-size:11px;line-height:1.5;color:#a6a4c7;margin:8px 0 0}.price-filter{margin-top:20px;padding:14px;border:1px solid #30205b;border-radius:12px;background:linear-gradient(145deg,#0b0e20,#050817)}.price-filter h3{margin:0 0 12px;color:#d7c2ff;font-size:17px}.price-range-values{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#e4d5ff;font-weight:bold}.range-wrap{height:34px;position:relative;margin:8px 0 0}.range-wrap input{position:absolute;left:0;top:0;width:100%;height:28px;margin:0;background:transparent;pointer-events:none;appearance:none;-webkit-appearance:none}.range-wrap input::-webkit-slider-runnable-track{height:4px;background:#3c2865;border-radius:5px}.range-wrap input::-moz-range-track{height:4px;background:#3c2865;border-radius:5px}.range-wrap input::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;pointer-events:auto;width:16px;height:16px;margin-top:-6px;border-radius:50%;background:#b27bff;border:2px solid #fff;box-shadow:0 0 8px #7027ff;cursor:pointer}.range-wrap input::-moz-range-thumb{pointer-events:auto;width:13px;height:13px;border-radius:50%;background:#b27bff;border:2px solid #fff;box-shadow:0 0 8px #7027ff;cursor:pointer}.filter-hint{font-size:11px;color:#a6a4c7;margin:2px 0 0}.catalog-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 16px;color:#c9c4e4}.catalog-controls label{font-size:13px}.catalog-controls select{max-width:100%;background:#100d27;border:1px solid #4b2a7c;border-radius:8px;color:#eee5ff;padding:9px 12px;font:inherit}.results-count{margin-left:auto;font-size:12px;color:#a6a4c7}.product-rating{display:flex;align-items:center;gap:7px;color:#ffd77a;font-size:13px}.product-reviews{color:#aaa6cc}.product-reviews:before{content:'▢';font-size:15px;margin-right:4px;color:#b89aff}.product-info .price{margin:2px 0 4px}
+@media(max-width:1000px){.topbar{height:auto;min-height:76px;flex-wrap:wrap;padding:12px 18px}.shop-search{order:5;flex-basis:100%}.top-link{margin-left:auto}}
+@media(max-width:520px){.account-btn{padding:8px}.top-link{padding:8px}.language-btn{padding:8px}}
+
+@media(max-width:700px){.cart-modal{height:min(88vh,850px);padding:14px}.cart-body{grid-template-columns:1fr;overflow:auto}.cart-items-panel{overflow:visible}.cart-summary{min-height:260px}.cart-item{grid-template-columns:58px 1fr auto;gap:9px}.cart-item img{width:58px;height:58px}}
+@media(max-width:800px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cart-status{margin-left:0}}
+@media(max-width:520px){.product-grid{grid-template-columns:1fr}.product-image{height:210px}}
+@media(max-width:800px){.catalog-layout{grid-template-columns:1fr}.category-sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.category-sidebar h2{grid-column:1/-1}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.features{grid-template-columns:1fr}.topbar{padding:0 14px;gap:10px}.brand{min-width:0;font-size:23px}.brand-icon{font-size:29px}.wrap{padding:18px 12px 28px}.hero{padding:24px}.section-title h2{font-size:21px}}
+@media(max-width:520px){.category-sidebar{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.topbar{height:auto;min-height:68px;flex-wrap:wrap;padding:10px}.top-link{margin-left:0}.hero{padding:20px}.hero p{font-size:15px}.section-title h2{white-space:normal}}
 </style>
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="index.html" aria-label="Повернутися на головну TechShop"><span class="brand-icon">🛒</span><span>Tech<span>Shop</span></span></a>
-  <a class="top-link" href="index.html">← На головну</a>
+  <a class="brand" href="https://697uy.github.io/SOOP3/" aria-label="Повернутися на головну TechShop"><span class="brand-icon">🛒</span><span>Tech<span>Shop</span></span></a>
+  <label class="shop-search"><input id="shopSearch" type="search" placeholder="Пошук товарів..." aria-label="Пошук товарів"><button id="searchGo" type="button" aria-label="Шукати">⌕</button></label>
+  <button class="language-btn" id="langToggle" type="button">UA | EN</button>
+  <button class="cart-status" id="cartStatus" type="button" aria-haspopup="dialog" aria-controls="cartOverlay">🛒 Кошик: 0</button>
+  <button class="account-btn" id="accountBtn" type="button"><span class="avatar-small">●</span><span id="accountName">Гість</span> ▾</button>
+  <a class="top-link" href="https://697uy.github.io/SOOP3/">← На головну</a>
 </header>
 <main class="wrap">
   <section class="hero">
     <div class="eyebrow">TECHSHOP • СВІТ СУЧАСНИХ ГАДЖЕТІВ</div>
     <h1>Техніка, яка робить щоденне життя зручнішим</h1>
     <p>У TechShop зібрані гаджети для навчання, роботи, відпочинку та ігор. Переглядай асортимент, порівнюй можливості й обирай техніку, яка підходить саме тобі.</p>
-    <div class="hero-actions"><a class="btn" href="index.html#catalog">Переглянути товари →</a><a class="btn secondary" href="index.html#discounts">Акції та знижки</a></div>
+    <div class="hero-actions"><a class="btn" href="https://697uy.github.io/SOOP3/#catalog">Переглянути товари →</a><a class="btn secondary" href="https://697uy.github.io/SOOP3/#discounts">Акції та знижки</a></div>
   </section>
-  <div class="section-title"><h2>Що можна знайти в TechShop?</h2></div>
-  <p class="intro">Ми зібрали основні категорії в одному місці: від повсякденних аксесуарів до техніки для розваг. На сторінці каталогу можна переглянути товари, скористатися пошуком, додати вибране до кошика та відкрити детальний опис конкретної моделі.</p>
-  <section class="grid" aria-label="Категорії товарів">
-    <article class="card"><div class="card-icon">📱</div><h3>Смартфони</h3><p>Для спілкування, фото, відео, навчання та улюблених застосунків. Звертай увагу на пам’ять, екран і можливості камери.</p><div class="pill-row"><span class="pill">AMOLED</span><span class="pill">Фото та відео</span><span class="pill">Пам’ять</span></div></article>
-    <article class="card"><div class="card-icon">💻</div><h3>Ноутбуки</h3><p>Для уроків, документів, творчих завдань і багатозадачності. Важливі параметри — оперативна пам’ять, накопичувач і вага.</p><div class="pill-row"><span class="pill">SSD</span><span class="pill">Навчання</span><span class="pill">Робота</span></div></article>
-    <article class="card"><div class="card-icon">🎧</div><h3>Аудіо</h3><p>Навушники та портативні колонки для музики, відео, дзвінків і відпочинку вдома або в дорозі.</p><div class="pill-row"><span class="pill">Bluetooth</span><span class="pill">Hi‑Fi</span><span class="pill">Портативність</span></div></article>
-    <article class="card"><div class="card-icon">📺</div><h3>Телевізори</h3><p>Великий екран для фільмів, серіалів, спортивних трансляцій та ігор. У характеристиках можна перевірити роздільну здатність і діагональ.</p><div class="pill-row"><span class="pill">4K UHD</span><span class="pill">Smart TV</span></div></article>
-    <article class="card"><div class="card-icon">🎮</div><h3>Ігрова техніка</h3><p>Пристрої та аксесуари для ігор, спільного дозвілля й захопливих віртуальних пригод.</p><div class="pill-row"><span class="pill">Gaming</span><span class="pill">Аксесуари</span></div></article>
-    <article class="card"><div class="card-icon">⌚</div><h3>Гаджети й аксесуари</h3><p>Смартгодинники, клавіатури, миші та інші корисні речі, які доповнюють основні пристрої.</p><div class="pill-row"><span class="pill">Зручність</span><span class="pill">Щодня</span></div></article>
-  </section>
+  <div class="section-title"><h2>Про товари</h2></div>
+  <div class="catalog-layout">
+    <aside class="category-sidebar" aria-label="Категорії товарів">
+      <h2>Категорії</h2>
+      <div class="category-item open" data-category-item="smartphones">
+        <button class="category-toggle" data-category="smartphones" aria-expanded="true"><span class="category-emoji">📱</span><span class="category-label"><strong>Смартфони</strong><small>Пристрої та аксесуари</small></span><span class="category-arrow">›</span></button>
+        <div class="category-sublist" data-sublist="smartphones"></div>
+      </div>
+      <div class="category-item" data-category-item="tablets">
+        <button class="category-toggle" data-category="tablets" aria-expanded="false"><span class="category-emoji">▣</span><span class="category-label"><strong>Планшети</strong><small>Пристрої та аксесуари</small></span><span class="category-arrow">›</span></button>
+        <div class="category-sublist" data-sublist="tablets"></div>
+      </div>
+      <div class="category-item" data-category-item="laptops">
+        <button class="category-toggle" data-category="laptops" aria-expanded="false"><span class="category-emoji">💻</span><span class="category-label"><strong>Ноутбуки</strong><small>Пристрої та аксесуари</small></span><span class="category-arrow">›</span></button>
+        <div class="category-sublist" data-sublist="laptops"></div>
+      </div>
+      <div class="category-item" data-category-item="other">
+        <button class="category-toggle" data-category="other" aria-expanded="false"><span class="category-emoji">⌚</span><span class="category-label"><strong>Все інше</strong><small>Інші гаджети й техніка</small></span><span class="category-arrow">›</span></button>
+        <div class="category-sublist" data-sublist="other"></div>
+      </div>
+      <section class="price-filter" aria-label="Фільтр за ціною">
+        <h3 id="priceFilterTitle">Ціна</h3>
+        <div class="price-range-values"><span><span id="minPricePrefix">Від</span> <span id="minPriceLabel">₴ 0</span></span><span><span id="maxPricePrefix">До</span> <span id="maxPriceLabel">₴ 100 000</span></span></div>
+        <div class="range-wrap"><input id="minPrice" type="range" min="0" max="100000" step="500" value="0" aria-label="Мінімальна ціна"><input id="maxPrice" type="range" min="0" max="100000" step="500" value="100000" aria-label="Максимальна ціна"></div>
+        <p class="filter-hint" id="priceFilterHint">Перетягни повзунки, щоб обрати діапазон</p>
+      </section>
+      <section class="country-filter" aria-label="Країна та валюта">
+        <label for="countrySelect" id="countrySelectLabel">🌍 Країна / валюта</label>
+        <select id="countrySelect">
+          <option value="UA">🇺🇦 Україна — гривня (UAH)</option>
+          <option value="US">🇺🇸 США — долар (USD)</option>
+          <option value="PL">🇵🇱 Польща — злотий (PLN)</option>
+          <option value="DE">🇩🇪 Німеччина — євро (EUR)</option>
+          <option value="GB">🇬🇧 Велика Британія — фунт (GBP)</option>
+          <option value="JP">🇯🇵 Японія — єна (JPY)</option>
+          <option value="CA">🇨🇦 Канада — канадський долар (CAD)</option>
+        </select>
+        <p class="currency-note" id="currencyNote">Ціни перераховуються з гривні за демонстраційним курсом. Вартість товарів залишається однаковою.</p>
+      </section>
+    </aside>
+    <section class="category-content">
+      <h2 id="categoryTitle">Смартфони</h2>
+      <p class="intro" id="categoryDescription">Обери тип товару — і нижче з’являться відповідні моделі.</p>
+      <div class="subcategory-row" id="subcategoryRow"></div>
+      <div class="catalog-controls"><label for="sortSelect" id="sortLabel">Сортувати за ціною</label><select id="sortSelect"><option value="default">За замовчуванням</option><option value="high">Від дорогих до дешевих</option><option value="low">Від дешевих до дорогих</option></select><span id="resultsCount" class="results-count"></span></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+  </div>
   <div class="section-title"><h2>Як обрати товар?</h2></div>
   <section class="features">
     <div class="feature"><b>01 · Знайди</b><p>Відкрий каталог на головній сторінці та скористайся пошуком або категоріями.</p></div>
-    <div class="feature"><b>02 · Дізнайся більше</b><p>Натисни «Детальніше» на картці товару, щоб побачити опис і характеристики.</p></div>
+    <div class="feature"><b>02 · Обери</b><p>Перемикай підкатегорії, щоб знайти потрібний пристрій або аксесуар.</p></div>
     <div class="feature"><b>03 · Додай до кошика</b><p>Обрані позиції можна зібрати в кошику. Сайт є демонстраційним, реальна оплата не виконується.</p></div>
   </section>
 </main>
+<div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <div class="cart-modal">
+    <div class="cart-modal-head"><h2 id="cartTitle">🛒 Ваш кошик</h2><button class="cart-close" id="closeCart" aria-label="Закрити кошик">Закрити ×</button></div>
+    <div class="cart-body">
+      <div class="cart-items-panel" id="cartItems"></div>
+      <aside class="cart-summary">
+        <h3>Список товарів (без фото):</h3>
+        <div class="cart-summary-list" id="cartSummaryList"><p>Кошик поки порожній.</p></div>
+        <div class="cart-summary-total"><span>Сума замовлення:</span><strong id="cartTotal">0 ₴</strong></div>
+        <button class="cart-checkout" id="checkoutBtn">Оформити замовлення</button>
+        <p class="cart-note">Демо-магазин: реальна оплата не виконується.</p>
+      </aside>
+    </div>
+  </div>
+</div>
 <footer class="footer">TechShop — техніка для твого щоденного життя ✦</footer>
+
+<script>
+const catalog = {
+ smartphones:{title:'Смартфони',description:'Смартфони та аксесуари до них.',subs:['Усі','Смартфони','Навушники','Чохли','Зарядки'],products:[
+ {name:'Smartphone Nova X',type:'Смартфони',price:'18 999 ₴',desc:'Яскравий екран і камера високої чіткості.',img:'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=700&q=85'},
+ {name:'Smartphone Pro 128GB',type:'Смартфони',price:'24 999 ₴',desc:'Швидкий і зручний смартфон на кожен день.',img:'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=85'},
+ {name:'Навушники AirBeat',type:'Навушники',price:'2 499 ₴',desc:'Бездротовий звук для музики та дзвінків.',img:'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=700&q=85'},
+ {name:'Навушники Studio',type:'Навушники',price:'3 799 ₴',desc:'Комфортна посадка та насичений звук.',img:'https://images.unsplash.com/photo-1508048228-9f1b3a3e6e7d?auto=format&fit=crop&w=700&q=85'},
+ {name:'Чохол Clear Case',type:'Чохли',price:'499 ₴',desc:'Прозорий захисний чохол для смартфона.',img:'https://images.unsplash.com/photo-1603313011108-4c4f2c4b6d5b?auto=format&fit=crop&w=700&q=85'},
+ {name:'Чохол Armor',type:'Чохли',price:'799 ₴',desc:'Посилений захист корпусу від подряпин.',img:'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&w=700&q=85'},
+ {name:'Чохол MagSafe',type:'Чохли',price:'1 099 ₴',desc:'Захисний чохол із магнітним кріпленням.',img:'https://images.unsplash.com/photo-1603313011108-4c4f2c4b6d5b?auto=format&fit=crop&w=700&q=85'},
+ {name:'Чохол Silicone Soft',type:'Чохли',price:'599 ₴',desc:'М’який силіконовий чохол у мінімалістичному стилі.',img:'https://images.unsplash.com/photo-1601593346740-925612772716?auto=format&fit=crop&w=700&q=85'},
+ {name:'Зарядка FastCharge 25W',type:'Зарядки',price:'749 ₴',desc:'Компактний адаптер швидкого заряджання USB-C.',img:'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=700&q=85'},
+ {name:'Зарядка Wireless Pad',type:'Зарядки',price:'1 199 ₴',desc:'Бездротова зарядна платформа для сумісних смартфонів.',img:'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=700&q=85'}]},
+ tablets:{title:'Планшети',description:'Планшети для навчання й відпочинку, чохли та зарядні пристрої.',subs:['Усі','Планшети','Чохли','Зарядки'],products:[
+ {name:'Tablet Air 10.9',type:'Планшети',price:'16 999 ₴',desc:'Легкий планшет для відео, читання та навчання.',img:'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=700&q=85'},
+ {name:'Tablet Pro 12',type:'Планшети',price:'27 499 ₴',desc:'Великий дисплей для творчості й роботи.',img:'https://images.unsplash.com/photo-1589739900243-4b52cd9dd8df?auto=format&fit=crop&w=700&q=85'},
+ {name:'Чохол Folio',type:'Чохли',price:'1 099 ₴',desc:'Чохол-підставка для зручного перегляду.',img:'https://images.unsplash.com/photo-1589739900243-4b52cd9dd8df?auto=format&fit=crop&w=700&q=85'},
+ {name:'Чохол Soft Cover',type:'Чохли',price:'699 ₴',desc:'М’яке покриття для захисту планшета.',img:'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=700&q=85'},
+ {name:'Зарядка USB-C 30W',type:'Зарядки',price:'899 ₴',desc:'Компактний адаптер для швидкого заряджання.',img:'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=700&q=85'},
+ {name:'Зарядка GaN 45W',type:'Зарядки',price:'1 299 ₴',desc:'Потужний компактний адаптер для планшетів і телефонів.',img:'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=700&q=85'},
+ {name:'Чохол Keyboard Folio',type:'Чохли',price:'1 899 ₴',desc:'Захисний чохол-підставка для комфортної роботи.',img:'https://images.unsplash.com/photo-1589739900243-4b52cd9dd8df?auto=format&fit=crop&w=700&q=85'}]},
+ laptops:{title:'Ноутбуки',description:'Ноутбуки, мишки та зарядні пристрої для навчання й роботи.',subs:['Усі','Ноутбуки','Мишки','Зарядки','Аксесуари'],products:[
+ {name:'Laptop Air 14',type:'Ноутбуки',price:'34 999 ₴',desc:'Легкий ноутбук для навчання та щоденних справ.',img:'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=85'},
+ {name:'Laptop Pro 16',type:'Ноутбуки',price:'49 999 ₴',desc:'Продуктивний ноутбук для багатозадачності.',img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=85'},
+ {name:'Мишка Wireless',type:'Мишки',price:'799 ₴',desc:'Бездротова мишка з точним керуванням.',img:'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85'},
+ {name:'Мишка Gaming RGB',type:'Мишки',price:'1 499 ₴',desc:'Зручна форма та підсвічування для ігор.',img:'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=700&q=85'},
+ {name:'Зарядка Laptop 65W',type:'Зарядки',price:'1 599 ₴',desc:'Універсальний адаптер USB-C для сумісних ноутбуків.',img:'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=700&q=85'},
+ {name:'Зарядка Laptop 100W',type:'Зарядки',price:'2 299 ₴',desc:'Потужний адаптер для ноутбуків із підтримкою USB-C.',img:'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=700&q=85'},
+ {name:'Мишка Silent Click',type:'Мишки',price:'649 ₴',desc:'Тиха бездротова мишка для навчання та офісу.',img:'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85'},
+ {name:'Підставка для ноутбука',type:'Аксесуари',price:'1 099 ₴',desc:'Регульована підставка для зручнішої роботи.',img:'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=700&q=85'}]},
+ other:{title:'Все інше',description:'Інші гаджети, аудіо та аксесуари.',subs:['Усі','Смартгодинники','Ігрові аксесуари','Колонки','Зарядки','Навушники'],products:[
+ {name:'Smart Watch Fit',type:'Смартгодинники',price:'3 499 ₴',desc:'Сповіщення та активність на зап’ясті.',img:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85'},
+ {name:'Smart Watch Active',type:'Смартгодинники',price:'4 299 ₴',desc:'Стильний годинник для щоденного використання.',img:'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=700&q=85'},
+ {name:'Game Controller',type:'Ігрові аксесуари',price:'2 199 ₴',desc:'Зручне керування для улюблених ігор.',img:'https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=700&q=85'},
+ {name:'Портативна колонка',type:'Колонки',price:'1 899 ₴',desc:'Компактна колонка для музики будь-де.',img:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=85'},
+ {name:'Smart Watch Sport',type:'Смартгодинники',price:'2 799 ₴',desc:'Спортивний годинник із зручним силіконовим ремінцем.',img:'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=700&q=85'},
+ {name:'Smart Watch Classic',type:'Смартгодинники',price:'5 199 ₴',desc:'Класичний дизайн для щоденного використання.',img:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85'},
+ {name:'Навушники Over-Ear',type:'Навушники',price:'3 299 ₴',desc:'Повнорозмірні навушники з комфортними амбушурами.',img:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=85'},
+ {name:'Зарядна станція 3-в-1',type:'Зарядки',price:'2 499 ₴',desc:'Зручне місце для заряджання сумісних гаджетів.',img:'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=700&q=85'},
+ {name:'Ігрова гарнітура RGB',type:'Ігрові аксесуари',price:'2 699 ₴',desc:'Гарнітура з мікрофоном для ігор та спілкування.',img:'https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=700&q=85'},
+ {name:'Колонка Mini Sound',type:'Колонки',price:'1 299 ₴',desc:'Компактна Bluetooth-колонка для музики в дорозі.',img:'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=85'}]}
+};
+let currentCategory='smartphones', currentSub='Усі';
+const row=document.getElementById('subcategoryRow'), grid=document.getElementById('productGrid');
+const cartItems=new Map();
+// Умовні фіксовані курси для демонстрації: скільки гривень дорівнює 1 одиниці валюти.
+const currencySettings={UA:{code:'UAH',rate:1,locale:'uk-UA',digits:0},US:{code:'USD',rate:41,locale:'en-US',digits:2},PL:{code:'PLN',rate:10.4,locale:'pl-PL',digits:2},DE:{code:'EUR',rate:44.5,locale:'de-DE',digits:2},GB:{code:'GBP',rate:52,locale:'en-GB',digits:2},JP:{code:'JPY',rate:0.28,locale:'ja-JP',digits:0},CA:{code:'CAD',rate:29.5,locale:'en-CA',digits:2}};
+let selectedCountry='UA';
+function moneyToNumber(price){return Number(String(price).replace(/[^0-9]/g,''))||0}
+function formatMoney(value){const currency=currencySettings[selectedCountry]||currencySettings.UA;return new Intl.NumberFormat(currency.locale,{style:'currency',currency:currency.code,minimumFractionDigits:currency.digits,maximumFractionDigits:currency.digits}).format(value/currency.rate)}
+function updateCart(){
+ const count=[...cartItems.values()].reduce((sum,item)=>sum+item.qty,0);
+ document.getElementById('cartStatus').textContent='🛒 Кошик: '+count;
+ const host=document.getElementById('cartItems'); host.innerHTML='';
+ if(!count){host.innerHTML='<div class="cart-empty">Кошик поки порожній.<br>Додай товар, який сподобався 💜</div>';}
+ let total=0;
+ cartItems.forEach((item,id)=>{
+   total+=item.priceValue*item.qty;
+   const el=document.createElement('div');el.className='cart-item';
+   el.innerHTML=`<img src="${item.img}" alt="${item.name}" onerror="this.style.opacity='.25'"><div><h3>${item.name}</h3><div class="cart-item-price">${formatMoney(item.priceValue)}</div><div class="cart-controls"><button data-minus aria-label="Зменшити кількість">−</button><span>${item.qty}</span><button data-plus aria-label="Збільшити кількість">+</button></div></div><button class="remove-item" aria-label="Видалити товар">×</button>`;
+   el.querySelector('[data-minus]').onclick=()=>{item.qty--;if(item.qty<=0)cartItems.delete(id);updateCart()};
+   el.querySelector('[data-plus]').onclick=()=>{item.qty++;updateCart()};
+   el.querySelector('.remove-item').onclick=()=>{cartItems.delete(id);updateCart()};
+   host.appendChild(el);
+ });
+ document.getElementById('cartTotal').textContent=formatMoney(total);
+ const summary=document.getElementById('cartSummaryList');
+ if(summary){summary.innerHTML='';if(!count){summary.innerHTML='<p>Кошик поки порожній.</p>';}else{cartItems.forEach(item=>{const row=document.createElement('div');row.className='cart-summary-row';row.innerHTML=`<span>• ${item.name} (${item.qty} шт.)</span><strong>${formatMoney(item.priceValue*item.qty)}</strong>`;summary.appendChild(row);});}}
+ document.querySelectorAll('.product-card').forEach(card=>{const name=card.dataset.name;const btn=card.querySelector('.buy-btn');if(btn){const inCart=[...cartItems.values()].some(item=>item.name===name);btn.classList.toggle('added',inCart);btn.textContent=inCart?'✓ У кошику':'🛒 Додати до кошика'}});
+}
+function openCart(){document.getElementById('cartOverlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeCart(){document.getElementById('cartOverlay').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('cartStatus').addEventListener('click',openCart);
+document.getElementById('closeCart').addEventListener('click',closeCart);
+document.getElementById('cartOverlay').addEventListener('click',e=>{if(e.target.id==='cartOverlay')closeCart()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart()});
+document.getElementById('checkoutBtn').addEventListener('click',()=>alert('Це демо-версія TechShop. Оплата поки не працює. Повна версія планується 12.12.2026.'));
+function render(){
+ const cat=catalog[currentCategory];
+ document.getElementById('categoryTitle').textContent=cat.title;
+ document.getElementById('categoryDescription').textContent=cat.description;
+ row.innerHTML='';
+ cat.subs.forEach(sub=>{const b=document.createElement('button');b.className='subcategory-btn'+(sub===currentSub?' active':'');b.textContent=sub;b.onclick=()=>{currentSub=sub;render()};row.appendChild(b)});
+ document.querySelectorAll('[data-sublist]').forEach(list=>{
+   const key=list.dataset.sublist, category=catalog[key]; list.innerHTML='';
+   category.subs.filter(sub=>sub!=='Усі').forEach(sub=>{const b=document.createElement('button');b.className='category-subbtn'+(key===currentCategory&&sub===currentSub?' active':'');b.textContent=sub;b.onclick=()=>{currentCategory=key;currentSub=sub;document.querySelectorAll('[data-category-item]').forEach(item=>{const open=item.dataset.categoryItem===key;item.classList.toggle('open',open);item.querySelector('.category-toggle').setAttribute('aria-expanded',String(open))});render()};list.appendChild(b)});
+ });
+ let products=cat.products.filter(p=>(currentSub==='Усі'||p.type===currentSub));
+ const query=(document.getElementById('shopSearch').value||'').trim().toLocaleLowerCase();
+ if(query)products=products.filter(p=>(p.name+' '+p.type+' '+p.desc).toLocaleLowerCase().includes(query));
+ const min=Number(document.getElementById('minPrice').value), max=Number(document.getElementById('maxPrice').value);
+ products=products.filter(p=>moneyToNumber(p.price)>=min&&moneyToNumber(p.price)<=max);
+ const sort=document.getElementById('sortSelect').value;
+ if(sort==='high')products.sort((a,b)=>moneyToNumber(b.price)-moneyToNumber(a.price));
+ if(sort==='low')products.sort((a,b)=>moneyToNumber(a.price)-moneyToNumber(b.price));
+ grid.innerHTML='';
+ products.forEach((p,index)=>{
+   const rating=(4.2+(((p.name.length*7+index*3)%8)/10)).toFixed(1);
+   const reviews=300+((p.name.length*37+index*53)%701);
+   const card=document.createElement('article');card.className='product-card';card.dataset.name=p.name;
+   card.innerHTML=`<div class="product-image"><img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<span style=&quot;font-size:64px&quot;>🛍️</span>'"></div><div class="product-info"><h3>${p.name}</h3><div class="product-rating"><span>★ ${rating}</span><span class="product-reviews">${reviews} відгуків</span></div><p>${p.desc}</p><div class="price">${formatMoney(moneyToNumber(p.price))}</div><button class="buy-btn">🛒 Додати до кошика</button></div>`;
+   const btn=card.querySelector('button');btn.onclick=()=>{const id=currentCategory+'-'+p.name;if(cartItems.has(id)){cartItems.get(id).qty++}else{cartItems.set(id,{...p,priceValue:moneyToNumber(p.price),qty:1,id})}updateCart()};grid.appendChild(card);
+ });
+ document.getElementById('resultsCount').textContent=products.length+' товар(ів)';
+ if(!products.length)grid.innerHTML='<p class="empty-note">За цими параметрами товарів не знайдено. Зміни фільтр ціни або пошук.</p>';
+ updateCart();
+}
+function updatePriceLabels(){
+ const minInput=document.getElementById('minPrice'),maxInput=document.getElementById('maxPrice');
+ if(Number(minInput.value)>Number(maxInput.value)-500)minInput.value=String(Math.max(0,Number(maxInput.value)-500));
+ if(Number(maxInput.value)<Number(minInput.value)+100)maxInput.value=String(Math.min(100000,Number(minInput.value)+500));
+ document.getElementById('minPriceLabel').textContent=formatMoney(Number(minInput.value));
+ document.getElementById('maxPriceLabel').textContent=formatMoney(Number(maxInput.value));
+ render();
+}
+document.getElementById('shopSearch').addEventListener('input',render);
+document.getElementById('searchGo').addEventListener('click',()=>{document.getElementById('categoryTitle').scrollIntoView({behavior:'smooth',block:'start'});render()});
+document.getElementById('sortSelect').addEventListener('change',render);
+document.getElementById('minPrice').addEventListener('input',updatePriceLabels);
+document.getElementById('maxPrice').addEventListener('input',updatePriceLabels);
+document.getElementById('countrySelect').addEventListener('change',e=>{selectedCountry=e.target.value;updatePriceLabels();updateCart()});
+document.getElementById('accountBtn').addEventListener('click',()=>{const old=document.getElementById('accountName').textContent;const next=prompt('Введи ім’я для свого профілю:',old==='Гість'?'John':old);if(next&&next.trim())document.getElementById('accountName').textContent=next.trim().slice(0,24)});
+let english=false;
+document.getElementById('langToggle').addEventListener('click',()=>{
+ english=!english;const t=id=>document.getElementById(id);t('langToggle').textContent=english?'EN | UA':'UA | EN';
+ t('shopSearch').placeholder=english?'Search products...':'Пошук товарів...';t('shopSearch').setAttribute('aria-label',t('shopSearch').placeholder);
+ t('priceFilterTitle').textContent=english?'Price':'Ціна';t('priceFilterHint').textContent=english?'Drag sliders to choose a price range':'Перетягни повзунки, щоб обрати діапазон';document.getElementById('minPricePrefix').textContent=english?'From':'Від';document.getElementById('maxPricePrefix').textContent=english?'To':'До';t('countrySelectLabel').textContent=english?'🌍 Country / currency':'🌍 Країна / валюта';t('currencyNote').textContent=english?'Prices are converted from UAH using a demo exchange rate. The underlying value of each product stays the same.':'Ціни перераховуються з гривні за демонстраційним курсом. Вартість товарів залишається однаковою.';
+ t('sortLabel').textContent=english?'Sort by price':'Сортувати за ціною';
+ const opts=t('sortSelect').options;opts[0].text=english?'Default order':'За замовчуванням';opts[1].text=english?'Most expensive first':'Від дорогих до дешевих';opts[2].text=english?'Cheapest first':'Від дешевих до дорогих';
+ t('accountName').textContent=t('accountName').textContent==='Гість'?(english?'Guest':'Гість'):t('accountName').textContent;
+ t('cartStatus').textContent=english?'🛒 Cart: '+[...cartItems.values()].reduce((n,i)=>n+i.qty,0):'🛒 Кошик: '+[...cartItems.values()].reduce((n,i)=>n+i.qty,0);
+ render();
+});
+document.querySelectorAll('.category-toggle').forEach(b=>b.addEventListener('click',()=>{
+ const key=b.dataset.category, item=b.closest('[data-category-item]'), wasOpen=item.classList.contains('open');
+ document.querySelectorAll('[data-category-item]').forEach(other=>{other.classList.remove('open');other.querySelector('.category-toggle').setAttribute('aria-expanded','false')});
+ if(!wasOpen){item.classList.add('open');b.setAttribute('aria-expanded','true');currentCategory=key;currentSub='Усі';render()}
+}));updatePriceLabels();
+</script>
+
 </body>
 </html>
