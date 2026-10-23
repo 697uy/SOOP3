@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TechShop — наші товари</title>
+<meta name="description" content="Огляд асортименту TechShop: смартфони, ноутбуки, аудіо, телевізори, ігрова техніка та аксесуари.">
+<style>
+:root{--bg:#030611;--panel:#070b1a;--purple:#7027ff;--purple2:#9b59ff;--line:#28204d;--text:#f5f3ff;--muted:#a6a4c7;--green:#22e6a0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none;cursor:pointer}
+.topbar{height:76px;display:flex;align-items:center;gap:22px;padding:0 30px;border-bottom:1px solid #442080;background:#030611;position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:10px;min-width:260px;font-size:29px;font-weight:800;letter-spacing:-1px}.brand-icon{font-size:38px;color:#a66aff;text-shadow:0 0 14px #792bff}.brand span:last-child span{color:#7b2dff}.top-link{margin-left:auto;border:1px solid #442080;background:#0b0820;border-radius:9px;padding:10px 14px;white-space:nowrap}.top-link:hover{background:#4e17b8}
+.wrap{max-width:1250px;margin:0 auto;padding:28px 26px 40px}.hero{border:1px solid #6b26e8;border-radius:14px;padding:36px;background:radial-gradient(ellipse at 85% 20%,#5520a955,transparent 42%),linear-gradient(105deg,#05091a,#10064c 55%,#05091a);box-shadow:0 0 24px #4512a533}.eyebrow{color:#b88aff;font-weight:bold;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:10px 0;color:#d5bdff}.hero p{max-width:800px;font-size:17px;color:#d2c9ff;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;border:1px solid #6d30c6;border-radius:9px;padding:12px 17px;background:linear-gradient(110deg,#601cff,#9b49ff);font-weight:bold}.btn.secondary{background:#0b0923;border-color:#492078;color:#dfd1ff}.section-title{display:flex;align-items:center;gap:14px;margin:32px 0 15px}.section-title h2{font-size:25px;margin:0;white-space:nowrap}.section-title:after{content:"";height:1px;background:linear-gradient(90deg,#7b25ff,#25123e);flex:1}.intro{color:#c9c4e4;line-height:1.8;max-width:1000px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid #30205b;border-radius:12px;padding:20px;background:linear-gradient(145deg,#0b0e20,#050817);box-shadow:0 8px 24px #0003;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:#8d45ff}.card-icon{font-size:35px;margin-bottom:8px;filter:drop-shadow(0 0 10px #7a2cff55)}.card h3{margin:5px 0 8px;font-size:19px;color:#d7c2ff}.card p{margin:0;color:#bcb6da;line-height:1.65}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.pill{font-size:12px;color:#e2d5ff;border:1px solid #4b2a7c;background:#110d29;border-radius:20px;padding:5px 9px}.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.feature{border:1px solid #28214a;background:#080b1b;border-radius:10px;padding:18px}.feature b{display:block;color:#c9a6ff;font-size:17px;margin-bottom:5px}.feature p{color:#bcb6da;margin:0}.footer{margin-top:35px;text-align:center;background:linear-gradient(90deg,#3210a5,#5d19d8);padding:20px;font-size:17px;color:#e1d5ff;border-top:2px solid #7928ff}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.features{grid-template-columns:1fr}.topbar{padding:0 14px;gap:10px}.brand{min-width:0;font-size:23px}.brand-icon{font-size:29px}.wrap{padding:18px 12px 28px}.hero{padding:24px}.section-title h2{font-size:21px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.topbar{height:auto;min-height:68px;flex-wrap:wrap;padding:10px}.top-link{margin-left:0}.hero{padding:20px}.hero p{font-size:15px}.section-title h2{white-space:normal}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Повернутися на головну TechShop"><span class="brand-icon">🛒</span><span>Tech<span>Shop</span></span></a>
+  <a class="top-link" href="index.html">← На головну</a>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">TECHSHOP • СВІТ СУЧАСНИХ ГАДЖЕТІВ</div>
+    <h1>Техніка, яка робить щоденне життя зручнішим</h1>
+    <p>У TechShop зібрані гаджети для навчання, роботи, відпочинку та ігор. Переглядай асортимент, порівнюй можливості й обирай техніку, яка підходить саме тобі.</p>
+    <div class="hero-actions"><a class="btn" href="index.html#catalog">Переглянути товари →</a><a class="btn secondary" href="index.html#discounts">Акції та знижки</a></div>
+  </section>
+  <div class="section-title"><h2>Що можна знайти в TechShop?</h2></div>
+  <p class="intro">Ми зібрали основні категорії в одному місці: від повсякденних аксесуарів до техніки для розваг. На сторінці каталогу можна переглянути товари, скористатися пошуком, додати вибране до кошика та відкрити детальний опис конкретної моделі.</p>
+  <section class="grid" aria-label="Категорії товарів">
+    <article class="card"><div class="card-icon">📱</div><h3>Смартфони</h3><p>Для спілкування, фото, відео, навчання та улюблених застосунків. Звертай увагу на пам’ять, екран і можливості камери.</p><div class="pill-row"><span class="pill">AMOLED</span><span class="pill">Фото та відео</span><span class="pill">Пам’ять</span></div></article>
+    <article class="card"><div class="card-icon">💻</div><h3>Ноутбуки</h3><p>Для уроків, документів, творчих завдань і багатозадачності. Важливі параметри — оперативна пам’ять, накопичувач і вага.</p><div class="pill-row"><span class="pill">SSD</span><span class="pill">Навчання</span><span class="pill">Робота</span></div></article>
+    <article class="card"><div class="card-icon">🎧</div><h3>Аудіо</h3><p>Навушники та портативні колонки для музики, відео, дзвінків і відпочинку вдома або в дорозі.</p><div class="pill-row"><span class="pill">Bluetooth</span><span class="pill">Hi‑Fi</span><span class="pill">Портативність</span></div></article>
+    <article class="card"><div class="card-icon">📺</div><h3>Телевізори</h3><p>Великий екран для фільмів, серіалів, спортивних трансляцій та ігор. У характеристиках можна перевірити роздільну здатність і діагональ.</p><div class="pill-row"><span class="pill">4K UHD</span><span class="pill">Smart TV</span></div></article>
+    <article class="card"><div class="card-icon">🎮</div><h3>Ігрова техніка</h3><p>Пристрої та аксесуари для ігор, спільного дозвілля й захопливих віртуальних пригод.</p><div class="pill-row"><span class="pill">Gaming</span><span class="pill">Аксесуари</span></div></article>
+    <article class="card"><div class="card-icon">⌚</div><h3>Гаджети й аксесуари</h3><p>Смартгодинники, клавіатури, миші та інші корисні речі, які доповнюють основні пристрої.</p><div class="pill-row"><span class="pill">Зручність</span><span class="pill">Щодня</span></div></article>
+  </section>
+  <div class="section-title"><h2>Як обрати товар?</h2></div>
+  <section class="features">
+    <div class="feature"><b>01 · Знайди</b><p>Відкрий каталог на головній сторінці та скористайся пошуком або категоріями.</p></div>
+    <div class="feature"><b>02 · Дізнайся більше</b><p>Натисни «Детальніше» на картці товару, щоб побачити опис і характеристики.</p></div>
+    <div class="feature"><b>03 · Додай до кошика</b><p>Обрані позиції можна зібрати в кошику. Сайт є демонстраційним, реальна оплата не виконується.</p></div>
+  </section>
+</main>
+<footer class="footer">TechShop — техніка для твого щоденного життя ✦</footer>
+</body>
+</html>
